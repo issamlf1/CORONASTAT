@@ -1,0 +1,74 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6" >
+      <div class="d-inline-flex p-2 col-example">
+        <form [formGroup]="formGroup" class="form-inline md-form mr-auto mb-4">
+          <input class="form-control mr-sm-2" type="text" formControlName="country" placeholder="Search by Country"
+            aria-label="Search">
+          <button [disabled]="!formGroup.valid" (click)="onSubmit()" mdbBtn size="sm" color="elegant" rounded="true"
+            class="my-0 waves-light" mdbWavesEffect type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+                          <h1 class="title">Corona virus statistics of {{country}}</h1>
+  <div class="row">
+
+    <div class="newData  col-sm-6">
+      <div class="card" *ngIf="death">
+        <h5 class="card-header" style="text-align: center;font-weight: bold"><span class="title3">Evolution of the epidemic</span><span class="lastUpdate">{{lastUpdate}}</span></h5>
+        <div class="card-body">
+          <table style="width:100%">
+            <tr>
+              <th>Confirmed</th>
+              <th>Recovered</th>
+              <th>Death</th>
+            </tr>
+            <tr>
+              <td>{{totalCases}}</td>
+              <td>{{recovered}}</td>
+              <td>{{death}}</td>
+            </tr>
+          </table>
+          <hr>
+          <div style="display: block">
+            <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels"
+              [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                    <h1 class="title2">Statistics since 01/22/2020</h1>
+
+  <div class="row">
+    <div class="border col-sm-6">
+      <div class="chart-container" style="display: block">
+        <canvas baseChart *ngIf="mydata1.length!=0" [datasets]="barChartData1" [labels]="barChartLabels1"
+          [options]="barChartOptions1" [legend]="barChartLegend1" [chartType]="barChartType1" [colors]="chartColors1">
+        </canvas>
+      </div>
+    </div>
+    <div class="border col-sm-6">
+      <div class="chart-container" style="display: block">
+        <canvas baseChart *ngIf="mydata.length!=0" [datasets]="barChartData" [labels]="barChartLabels"
+          [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>  
+  
+    <div class="row">
+      <div class="border center col-sm-6">
+        <div class="chart-container" style="display: block">
+          <canvas baseChart *ngIf="mydata2.length!=0" [datasets]="barChartData2" [labels]="barChartLabels2"
+            [options]="barChartOptions2" [legend]="barChartLegend2" [chartType]="barChartType2" [colors]="chartColors2">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>

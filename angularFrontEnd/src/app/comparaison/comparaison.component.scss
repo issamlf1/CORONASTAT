@@ -1,0 +1,47 @@
+.example-form {
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 70%;
+  }
+  .top {
+    margin-top: 20px;  
+  }
+    .title{
+      text-align: center;
+      font-family: 'Balsamiq Sans', cursive;
+      font-size:40px;
+      margin-bottom: 70px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    
+    }
+.center{
+  margin-right: auto;
+  margin-left: auto;
+}
+.border{
+  border: solid;
+}
+.border h3{
+  font-family: 'Balsamiq Sans', cursive;
+  text-align: center;
+}
+
+.title2{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size:20px;
+  /* margin-bottom: 10px; */
+}
+.search{
+  border: groove;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search h1{
+  text-align: center;
+}

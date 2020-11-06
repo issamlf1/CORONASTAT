@@ -1,0 +1,78 @@
+
+<div class="con">
+  <h1 class="title">Clusters of countries</h1>
+  <p>In this page,we attempt to group different countries using <span>K-means</span> clustering
+  based on Average age, Number of tests performed for covid-19, Confirmed Cases, Death,Recovered cases from Corona virus.</p>
+  <p>To have a better visualisation of the clusters, we used PCA algorithm to decrease the number of dimensions.</p>
+  <p class="title2">Graphical representation of the distribution of countries on the clusters based on the four indicators « Average Age, Confirmed cases, Recovered, Deaths »   </p>
+  <div class="">
+      <div class="border graph1">
+              <div style="width: 100%">
+                      <canvas id="bubbleAge"></canvas>
+              </div>
+      </div>
+      <p class="title2">Cluster details for countries</p>
+      <div class="border tableMargin">
+              <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Cluster</th>
+                          <th scope="col">Average Age</th>
+                          <th scope="col">Confirmed</th>
+                          <th scope="col">Recovered</th>
+                          <th scope="col">Deaths</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let row of tableAge;let i=index" >
+                          <td>{{row.cluster}}</td>
+                          <td>{{row.AverageAge}}</td>
+                          <td>{{row.Confirmed}}</td>
+                          <td>{{row.Recovered}}</td>
+                          <td>{{row.Deaths}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+      </div>
+
+  </div>
+  <div class="">
+    <p class="title2">Graphical representation of the distribution of countries on the clusters based on the four indicators « Total tests, Confirmed cases, Recovered, Deaths »</p>
+          <div class="border graph1">
+                  <div style="width: 100%">
+                      <canvas id="bubbleTest"></canvas>
+                  </div>
+          </div>
+          <p class="title2">Cluster details for countries</p>
+          <div class="border tableMargin">
+                  <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Cluster</th>
+                              <th scope="col">Confirmed</th>
+                              <th scope="col">Recovered</th>
+                              <th scope="col">Deaths</th>
+                              <th scope="col">Total tests</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let row of tableTest;let i=index" >
+                              <td>{{row.cluster}}</td>
+                              <td>{{row.Confirmed}}</td>
+                              <td>{{row.Recovered}}</td>
+                              <td>{{row.Deaths}}</td>
+                              <td>{{row.totalTests}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+</div>

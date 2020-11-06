@@ -1,0 +1,68 @@
+<div class="container">
+                <h1 class="title">Comparison of different indicators between <br> {{country1}} and {{country2}}</h1>
+        <div class="row">
+                <div class="search col-sm-6">
+                        <h1 class="title2">Choose the countries to compare</h1>
+                        <div class="d-inline-flex p-2 col-example">
+                                <form [formGroup]="formGroup" class="form-inline md-form mr-auto mb-4">
+                                        <input class="form-control mr-sm-2" type="text"  placeholder="Morocco" formControlName="country1" aria-label="Search">
+                                        <input class="form-control mr-sm-2" type="text"  placeholder="Algeria" formControlName="country2" aria-label="Search">
+                                        <button [disabled]="!formGroup.valid" (click)="onSubmit()" mdbBtn size="sm"
+                                                color="elegant" rounded="true" class="my-0 waves-light" mdbWavesEffect
+                                                type="submit">Compare</button>
+                                       
+                                </form>
+                        </div>
+                </div>
+        </div>
+       <!--  <h1 class="title">Comparison of different indicators between <br> {{country1}} and {{country2}}</h1> -->
+
+
+     <!--    <form [formGroup]="formGroup">
+                <mat-form-field class="example-full-width">
+                        <mat-label>Country Name 1</mat-label>
+                        <input matInput placeholder="Morocco" formControlName="country1">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                        <mat-label>Country Name 2</mat-label>
+                        <input matInput placeholder="Algeria" formControlName="country2">
+                </mat-form-field>
+                <button type="submit" [disabled]="!formGroup.valid" (click)="onSubmit()"
+                        mat-stroked-button>compare</button>
+
+        </form> -->
+
+        <div class="row">
+             <div class="border col-sm-6">
+                     <h3>Comparison between confirmed cases</h3>
+                        <div class="chart-container" style="display: block">
+                                        <canvas baseChart [datasets]="chartDataConfirmed" [labels]="chartLabels" [options]="chartOptions"
+                                                [legend]="chartLegend" [chartType]="chartType">
+                                        </canvas>
+                        </div>
+             </div>   
+             <div class="border col-sm-6"> 
+                        <h3>Comparison between death cases</h3>
+                        <div class="chart-container" style="display: block">
+                                        <canvas baseChart [datasets]="chartDataDeath" [labels]="chartLabels" [options]="chartOptions"
+                                                [legend]="chartLegend" [chartType]="chartType">
+                                        </canvas>
+                        </div>
+             </div>
+        </div>
+
+        <div class="row">
+                <div class="border center col-sm-6">
+                                <h3>Comparison between recovered cases</h3>
+                                <div class="chart-container" style="display: block">
+                                                <canvas baseChart [datasets]="chartDataRecovered" [labels]="chartLabels" [options]="chartOptions"
+                                                        [legend]="chartLegend" [chartType]="chartType">
+                                                </canvas>
+                                </div>
+                </div>
+
+
+        </div>
+
+
+</div>

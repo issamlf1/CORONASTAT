@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"scrapingDB.nature"}],"uuid":"be6444bd53084ddf82ceed8c3a1d0757"}

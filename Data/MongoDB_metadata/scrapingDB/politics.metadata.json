@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"scrapingDB.politics"}],"uuid":"dffc4e774a0244bab008a1979288cd3b"}

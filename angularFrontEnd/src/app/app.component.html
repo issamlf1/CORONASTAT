@@ -1,0 +1,88 @@
+
+
+<div >
+    <img class="image"  [src]=image >
+</div>
+<div class="navBar">
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>CORONASTAT</h1>
+            </div>
+                <ul class="navigation">
+                    <a routerLink=""><li>Info</li></a>
+                    <a routerLink="visualisation"><li>Visualisations</li></a>
+                    <a routerLink="clustering"><li>Clustering</li></a>
+                    <a routerLink="sentimentAnalytics"><li>Sentiment analytics</li></a>
+                </ul>
+
+        </div>
+    </div>
+</div>
+<!--<app-visualisation></app-visualisation>-->
+
+<!--<app-acceuil-compo></app-acceuil-compo>-->
+
+<!-- <app-visualisation></app-visualisation> -->
+<div class="body">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <app-clustering></app-clustering> -->
+
+<!-- <div class="footer">
+    <div class="content"></div>
+    <div class="copyright">&copy; Designed by Amr EL HAMMADI & Issam L'ANFOUF</div>
+</div> -->
+<!-- Footer -->
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6 class="h6Font">About</h6>
+          <p class="text-justify">CORONASTAT is a web site that analyse covid19 data of every country using different types of graphes, and algorithemes like K-means sentiment analytics.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6 class="h6Font">Categories</h6>
+          <ul class="footer-links">
+            <li><a href="">Info</a></li>
+            <li><a href="">Visualisation</a></li>
+            <li><a href="">Clustering</a></li>
+            <li><a href="">Sentiment analytics</a></li>
+          
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6 class="h6Font">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 Created by Amr EL HAMMADI & ISSAM L'ANFOUF.
+          </p>
+        </div>
+
+   <!--      <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><img src="https://img.icons8.com/material/24/000000/facebook--v1.png"/></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div> -->
+      </div>
+    </div>
+</footer>

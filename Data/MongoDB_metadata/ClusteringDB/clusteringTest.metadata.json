@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"ClusteringDB.clusteringTest"}],"uuid":"6e438ec18da543548d15d5899e91709f"}
